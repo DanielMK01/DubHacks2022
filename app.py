@@ -47,6 +47,16 @@ def lessons(errors:list):
         #"I walk yesterday"
         elif 'VERB:FORM' in error: 
             links.add('https://www.englishgrammar101.com/module-3/verbs-types-tenses-and-moods/lesson-8/tenses-of-verbs')
+        elif 'CONTR' in error:
+            links.add('https://www.myenglishpages.com/english/grammar-lesson-contraction.php')
+        elif 'CONJ' in error:
+            links.add('https://www.englishgrammar101.com/module-8/conjunctions-and-interjections/lesson-1/coordinate-conjunctions')
+        elif 'PRON' in error:
+            links.add('https://www.englishgrammar101.com/module-2/pronouns/lesson-1/personal-pronouns')
+        elif 'ADJ:FORM' in error or 'ADJ' in error:
+            links.add('https://www.englishgrammar101.com/module-6/modifiers-adjectives-and-adverbs/lesson-1/adjectives')
+        elif 'VERB:SVA' in error:
+            links.add('https://www.englishgrammar101.com/module-4/verbs-agreement-and-challenges/lesson-2/agreement-subjects-with-and-or-or-nor')
         elif 'VERB:TENSE' in error:
             links.add('https://www.englishgrammar101.com/module-3/verbs-types-tenses-and-moods/lesson-8/tenses-of-verbs')
         # elif 'SPELL' in error:

@@ -1,71 +1,71 @@
 <head>
-    <style> 
-      p.solid {
-        border-style: solid;
-        height: 20px; 
-        width: 40px;
-        text-align:center
-      }
-    </style>
-    <header>
-      <div class="navbar" id="navigation">
-        <a href="index.html">Home</a>
-        <a href="returnPage.html">Suggestions</a>
-      </div>
-      
-    </header>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>replit</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="style.css") }}"/>
-    <style>
-      p {
-        text-align:center
-        }
-      h1 {
-        text-align:center
-        }
-      form {
-        text-align:center
-        }
-    </style>
-  
-  <article>
-      <section>
-        <h1>Sentence Saver</h1>
-      </section>
-    </article>
+  <style> 
+    p.solid {
+      border-style: solid;
+      height: 20px; 
+      width: 40px;
+      text-align:center
+    }
+  </style>
+  <header>
+    <div class="navbar" id="navigation">
+      <a href="index.html">Home</a>
+      <a href="returnPage.html">Suggestions</a>
+    </div>
     
-  <div style="margin-left:130px" >
-  <textarea readonly name="text1" cols="80" rows="20" class="inputText" id="inputText1">{{ original }}</textarea>
-  <textarea readonly name="text2" cols="80" rows="20" class="inputText" id="inputText2" placeholder="">{{ corrected }}</textarea>
+  </header>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Sentence Saver</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="style.css") }}"/>
+  <style>
+    p {
+      text-align:center
+      }
+    h1 {
+      text-align:center
+      }
+    form {
+      text-align:center
+      }
+  </style>
+
+<article>
+    <section>
+      <h1>Sentence Saver</h1>
+    </section>
+  </article>
+  
+<div style="margin-left:130px" >
+<textarea readonly name="text1" cols="80" rows="20" class="inputText" id="inputText1">{{ original }}</textarea>
+<textarea readonly name="text2" cols="80" rows="20" class="inputText" id="inputText2" placeholder="">{{ corrected }}</textarea>
+</div>
+
+<p style="font-size: 34px">These are a few sites that could help!</p>
+
+  <div style = "text-align: center">
+    <!-- <textarea readonly name="text3" cols="90" rows="20" class="inputText"           id="inputText3" placeholder="Paste another version of the text here."></textarea> -->
+    
+      <ul id="listWithHandle">
+        {% for lin in the_links %}
+        <!-- <script>
+            let kLink = lin;
+            let potato = "potato";
+            document.getElementById("listName")
+        </script> -->
+            <li style="list-style: none;">
+                <span class="my-handle"></span>
+                <a id="listName" href= {{ lin }}>
+                <input type="hidden" lin="handles[]" value="{{ lin }}"/> {{lin}}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+  </div>
+  <!-- <button onclick="history.back()">Go Back</button> -->
+  <div style="text-align:center;">
+    <a href="{{ url_for('hello') }}">Back</a>
   </div>
   
-  <p style="font-size: 34px">These are a few sites that could help!</p>
+  <br><br><br><br><br><br><br>
   
-    <div style = "text-align: center">
-      <!-- <textarea readonly name="text3" cols="90" rows="20" class="inputText"           id="inputText3" placeholder="Paste another version of the text here."></textarea> -->
-      
-        <ul id="listWithHandle">
-          {% for lin in the_links %}
-          <!-- <script>
-              let kLink = lin;
-              let potato = "potato";
-              document.getElementById("listName")
-          </script> -->
-              <li style="list-style: none;">
-                  <span class="my-handle"></span>
-                  <a id="listName" href= {{ lin }}>
-                  <input type="hidden" lin="handles[]" value="{{ lin }}"/> {{lin}}
-                  </a>
-              </li>
-          {% endfor %}
-      </ul>
-    </div>
-    <!-- <button onclick="history.back()">Go Back</button> -->
-    <div style="text-align:center;">
-        <input type="button" onclick="location.href='index.html';" value="Press Me!">
-    </div>
-    
-    <br><br><br><br><br><br><br>
-    
