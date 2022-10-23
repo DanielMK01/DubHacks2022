@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <header>
+    <div class="navbar" id="navigation" >
+      <a href="index.html">Home</a>
+      <a href="returnPage.html">Suggestions</a>
+    </div>
+  </header>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <!-- <link href="/static/stylesheets/style.css" rel="stylesheet" type="text/css" /> -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="style.css") }}"/>
+  <style>
+    p {
+      text-align:center
+
+      }
+    h1 {
+      text-align:center
+
+      }
+    form {
+      text-align:center
+    }
+    .button{
+      
+    }
+    
+  </style>
+
+  <article>
+    <section>
+      <h1 style="font-family: Century Gothic" "font-size: 60px"> Sentence Saver</h1>
+      <p font-family: Georgia>Enter in any text and receive feedback and resources to help improve it!</p>
+    </section>
+  </article>
+  
+    <form method="POST">
+    <textarea style = "resize: none; border-radius: 25px; border-color: white;font-family = 'Times New Roman'" rows="20" cols="65" name="text" placeholder="  Enter your text here!"></textarea>
+    <!-- <input name = "text"> -->
+    <br>
+    <br>
+    <input type = "submit" value = "submit" />
+
+
+    </form> 
+</head>
+
+
+</html>
