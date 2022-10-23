@@ -29,8 +29,8 @@ def my_form_post():
     links_to_ret = request.form.getlist('handles[]')
     if not links_to_ret:
         links_to_ret = links
-    return render_template('my-form.html', link=links, count=len(links), the_links=links_to_ret)
-    # return hello() + text + str(len(errors))
+    #return render_template('my-form.html', link=links, count=len(links), the_links=links_to_ret)
+    return hello() + text + str(errors)
     #  return hello() + str(links_to_ret)
     # str(len(lessons(errors)))
 
@@ -45,6 +45,12 @@ def lessons(errors:list):
         #"I walk yesterday"
         elif 'VERB:FORM' in error: 
             links.add('https://www.englishgrammar101.com/module-3/verbs-types-tenses-and-moods/lesson-8/tenses-of-verbs')
+        elif 'VERB:TENSE' in error:
+            links.add('https://www.englishgrammar101.com/module-3/verbs-types-tenses-and-moods/lesson-8/tenses-of-verbs')
+        # elif 'SPELL' in error:
+
+        # elif 'CONJ' in error:
+
     return links
 
 
