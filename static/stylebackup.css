@@ -1,20 +1,20 @@
 html, body {
     height: 100%;
     width: 100%;
-    background-image: radial-gradient(white, #7ecbe2);
+    background-image: radial-gradient(#fdfcfc, #7a7a7a);
+    background-size: cover;
     margin: 0%;
    
   }
+  
+  
     <style>
-      
       p {
         font-size: 50px;
         text-align:center
         }
       h1 {
-        font-size: 100px;
-        line-height: 235px;
-        text-align: left;
+        font-size: 40px;
       }
   
       button {
@@ -37,13 +37,28 @@ html, body {
     height: 100%;
   }
   
+  .navbar {
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+  }
+  
+  .navbar a {
+    float: left;
+    font-size: 100 px;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    color: #c3c0bb;
+  }
+  
   textarea{
       resize: none;
       padding: 1.5%;
       border-radius: 25px;
   }
   
-  #hp  {
-   float: left;    
-   margin: 0 0 0 15px;
-  }

@@ -58,7 +58,11 @@ def extract_group_rankings():
 
 @app.route('/')
 def hello():
-    return render_template('index.html')
+    return render_template('index2.html')
+
+# @app.route('/')
+# def hello2():
+#     return render_template('index2.html')
 
 @app.route('/', methods=['POST'])
 def my_form_post():
@@ -67,7 +71,7 @@ def my_form_post():
     text_to_change = text
     # processed_text = add_new_input(text)
 
-    API_KEY = 'YORSDR2PHC1W5KFFLCG9IJG29DH3O2NG'
+    API_KEY = '15836DYNP6DZALUOGI867TOA3D84OYXQ'
     client = SaplingClient(api_key=API_KEY)
     edits = client.edits(text, session_id='test_session', variety=None, auto_apply=True)
     while (len(edits) is not 0):
@@ -84,7 +88,7 @@ def my_form_post():
     if not links_to_ret:
         links_to_ret = links
     # eturn render_template('my-formhtml', link=links, count=len(links), the_links=links_to_ret))
-    return render_template('returnPage.html', original=text, corrected=text_to_change, the_links=links_to_ret)    # # return hello() + text + str(len(errors))
+    return render_template('returnPage2.html', original=text, corrected=text_to_change, the_links=links_to_ret)    # # return hello() + text + str(len(errors))
     #  return hello() + str(links_to_ret)
     # str(len(lessons(errors)))
 
@@ -96,8 +100,8 @@ def lessons(errors:list):
             links.add('https://www.englishgrammar101.com/capitalization-and-punctuation')
         elif 'NOUN' in error:
             links.add('https://www.englishgrammar101.com/module-1/nouns/lesson-1/what-is-a-noun')
-        #"I walk ysterday"
-        elif 'VERB:FORM' in error: 
+        #"I walk yesterday"
+        elif 'VERBFORM' in error: 
             links.add('https://www.englishgrammar101.com/module-3/verbs-types-tenses-and-moods/lesson-8/tenses-of-verbs')
         elif 'CONTR' in error:
             links.add('https://www.myenglishpages.com/english/grammar-lesson-contraction.php')
@@ -107,9 +111,15 @@ def lessons(errors:list):
             links.add('https://www.englishgrammar101.com/module-2/pronouns/lesson-1/personal-pronouns')
         elif 'ADJFORM' in error or 'ADJ' in error:
             links.dd('https://www.englishgrammar101.com/module-6/modifiers-adjectives-and-adverbs/lesson-1/adjectives')
-        elif 'VERB:SVA' in error:
+        elif 'VERBSVA' in error:
             links.add('https://www.englishgrammar101.com/module-4/verbs-agreement-and-challenges/lesson-2/agreement-subjects-with-and-or-or-nor')
-    return links
+        elif 'VERBTENSE' in error:
+            links.add('https://www.khanacademy.org/humanities/grammar/parts-of-speech-the-verb/the-tenses/e/intro-to-verb-tense')
+        elif 'OTHER' in error:
+            links.add('https://www.englishgrammar101.com')
+        elif 'DET' in error:
+            links.add('https://www.myenglishpages.com/english/grammar-lesson-determiners.php')
+        return links
 
 if __name__ == "main":
     app.run()

@@ -1,0 +1,79 @@
+<head>
+    <style>
+      p.solid {
+        border-style: solid;
+        height: 20px;
+        width: 40px;
+        text-align: center
+      }
+    </style>
+    <header>
+      <a href="{{ url_for('hello') }}">
+        <img alt="return" src="https://i.imgur.com/qV2A32n.png" width="380" height="269" id="hp">
+      </a>
+  
+      <h1 style="font-family: 'Trebuchet MS'">Sentence Saver&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp&nbsp;</h1>
+    </header>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="style.css") }}"/>
+    <style>
+      p {
+        text-align: center
+      }
+  
+      h1 {
+        text-align: center
+      }
+  
+      h2 {
+        text-align: left
+      }
+  
+      form {
+        text-align: center
+      }
+    </style>
+    <h2 style="font-size: 34px">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Before&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;After
+      </p>
+  
+      <div style="margin-left:48px">
+        <textarea readonly name="text1" cols="80" rows="20" class="inputText" id="inputText1">{{ original }}</textarea>
+        <textarea readonly name="text2" cols="80" rows="20" class="inputText" id="inputText2" placeholder="">{{ corrected }}</textarea>
+      </div>
+  
+      <p style="font-size: 34px">Here are a few links that could help!</p>
+  
+      <div style="text-align: center">
+        <!-- <textarea readonly name="text3" cols="90" rows="20" class="inputText" id="inputText3"
+          placeholder="Paste another version of the text here.">     -->
+          <ul id="listWithHandle">
+            {% for lin in the_links %}
+            <!-- <script>
+                let kLink = lin;
+                let potato = "potato";
+                document.getElementById("listName")
+            </script> -->
+                <li style="list-style: none;">
+                    <span class="my-handle"></span>
+                    <a id="listName" href= {{ lin }}>
+                    <input type="hidden" lin="handles[]" value="{{ lin }}"/> {{lin}}
+                    </a>
+                </li>
+            {% endfor %}
+        <!-- </ul>        
+        </textarea> -->
+      </div>
+
+      <div style="text-align:center;">
+        <a href="{{ url_for('hello') }}">Back</a>
+      </div>
+  
+  
+      <br><br><br><br><br><br><br>
