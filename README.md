@@ -20,5 +20,7 @@ One of the more difficult tasks was collecting the information we needed for the
 1) Complete the data collection/visualization feature to allow users to see what grammatical problems were most common in their writing
 2) Provide a more scalable solution for personalized recommendations that does not involve as much hard-coding
 
+# How to try it out: 
+
 # Team:
 Daniel Kim, David Gim, Edward Lee, John Lee
