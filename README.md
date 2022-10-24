@@ -20,7 +20,13 @@ One of the more difficult tasks was collecting the information we needed for the
 1) Complete the data collection/visualization feature to allow users to see what grammatical problems were most common in their writing
 2) Provide a more scalable solution for personalized recommendations that does not involve as much hard-coding
 
-# How to try it out: 
+# How to try it out (only tested on MacOS): 
+1) Make sure you have Python 3 downloaded on your device and start a new virtual environment
+2) Install Flask (https://flask.palletsprojects.com/en/2.2.x/installation/#install-flask) using Python 3 onto your activated venv
+3) Clone the repository to your local device
+4) Get a personal API key from Sapling.AI (https://sapling.ai/api) and replace the indicated string at line 74 of app.py
+5) Go to the directory that the repo is saved to in the terminal and run the command "flask --app app run" without the quotation marks
+6) Once loaded, go to the provided link and try it out!
 
 # Team:
 Daniel Kim, David Gim, Edward Lee, John Lee
