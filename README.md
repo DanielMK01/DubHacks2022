@@ -32,4 +32,4 @@ One of the more difficult tasks was collecting the information we needed for the
 - Daniel Kim (https://github.com/DanielMK01)
 - David Gim (https://github.com/davidgim)
 - Edward Lee (https://github.com/EdwardLee14)
-- John Lee
+- John Lee (https://github.com/Johnslee123)
