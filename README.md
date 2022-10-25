@@ -22,11 +22,12 @@ One of the more difficult tasks was collecting the information we needed for the
 
 ## How to try it out (only tested on MacOS): 
 1) Make sure you have Python 3 downloaded on your device and start a new virtual environment
-2) Install Flask (https://flask.palletsprojects.com/en/2.2.x/installation/#install-flask) using Python 3 onto your activated venv
-3) Clone the repository to your local device
-4) Get a personal API key from Sapling.AI (https://sapling.ai/api) and replace the indicated string at line 74 of app.py
-5) Go to the directory that the repo is saved to in the terminal and run the command "flask --app app run" without the quotation marks
-6) Once loaded, go to the provided link and try it out!
+2) Download all the dependencies in requirements.txt into your virtual environment
+3) Install Flask (https://flask.palletsprojects.com/en/2.2.x/installation/#install-flask) using Python 3 onto your activated venv
+4) Clone the repository to your local device
+5) Get a personal API key from Sapling.AI (https://sapling.ai/api) and replace the indicated string at line 74 of app.py
+6) Go to the directory that the repo is saved to in the terminal and run the command "flask --app app run" without the quotation marks
+7) Once loaded, go to the provided link and try it out!
 
 ## Team:
 - Daniel Kim (https://github.com/DanielMK01)
