@@ -71,7 +71,7 @@ def my_form_post():
     text_to_change = text
     # processed_text = add_new_input(text)
 
-    API_KEY = '15836DYNP6DZALUOGI867TOA3D84OYXQ'
+    API_KEY = '' # place your personal key here
     client = SaplingClient(api_key=API_KEY)
     edits = client.edits(text, session_id='test_session', variety=None, auto_apply=True)
     while (len(edits) is not 0):
